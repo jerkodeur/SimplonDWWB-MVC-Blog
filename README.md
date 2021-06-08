@@ -1,4 +1,4 @@
-# SimponDWWB-MVC-Blog
+# SimplonDWWB-MVC-Blog
 
 Construction d'un blog avec l'architecture MVC
 
