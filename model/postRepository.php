@@ -29,5 +29,21 @@ function findAll(): array
 
 function findOneById(int $id): array
 {
-    //
+    $db = getConnection();
+
+    $query = $db->prepare(
+        'SELECT *
+        FROM post
+        WHERE id = :id
+        ORDER BY date DESC'
+    );
+
+    $query->bindParam(':id', $id, PDO::PARAM_INT);
+    $query->execute();
+    $post = $query->fetch();
+    $query->closeCursor();
+
+    $db = null;
+
+    return $post;
 }

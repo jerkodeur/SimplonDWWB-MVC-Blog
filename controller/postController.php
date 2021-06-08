@@ -9,6 +9,7 @@ function home()
 
 function show(int $id)
 {
+    require dirname(__DIR__) . '/model/postRepository.php';
     $post = findOneById($id);
     return render('show', compact('post'));
 }
