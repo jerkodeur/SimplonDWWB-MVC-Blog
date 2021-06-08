@@ -7,7 +7,7 @@
                 <div class="col">
                     <div class="bs-component">
                         <div class="alert alert-danger">
-                            <h3><?= nl2br(htmlentities($post['title'])) ?></h3>
+                            <h3><?= htmlentities($post['title']) ?></h3>
                             <div><?= nl2br(htmlentities($post['content'])) ?> ...</div>
                             <div class="text-end">
                                 <figcaption class="blockquote-footer  mt-2">
