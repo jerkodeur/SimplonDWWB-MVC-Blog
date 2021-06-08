@@ -18,7 +18,7 @@ function findAll(): array
 {
     $db = getConnection();
 
-    $query = $db->prepare('SELECT id, date, title, LEFT(content, 100), user FROM post');
+    $query = $db->prepare('SELECT id, date, title, LEFT(content, 100) as content, user FROM post');
     $query->execute();
     $posts = $query->fetchAll();
     $query->closeCursor();
